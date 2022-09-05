@@ -54,16 +54,20 @@ Para ejecutar este flow, es necesario lo siguiente:
 
 -   Para observar el resultado de este flow, abre un navegador y dirígete a localhost:1880/ui.
 -   Para observar datos en las gráficas de la  sección **clima manual**, debes enviar por MQTT un mensaje que contenga un JSON con las variables ID, temp y hum.
-- 
+
 ### Notas
 **Sección manual**
 -   Se suscribe al tema codigoIoT/flow5/mqtt en un broker local.
 -   Comando para comprobar el correcto funcionamiento `mosquitto_pub -h localhost -t codigoIoT/flow5/mqtt -m '{"ID":"Dafne","temp":22,"hum":91}'`
--- Nota: Para que la gráfica histórica muestre información, deben enviarse al menos 2 puntos.
+
+> **Note:** Para que la gráfica histórica muestre información, deben enviarse al menos 2 puntos.
+
 **Broker publico**
 -   Comando para consultar las ip publicas disponibles  `nslookup broker.hivemq.com`.
--- Nota: Se puede usar la ip de su elección
--- Nota: Para que múltiples datos de usuarios sea graficados en la sección de Histórico Público, es necesario que múltiples usuarios se encuentren publicando simultanemente.
+
+> **Note:** Se puede usar la ip de su elección
+> **Note:** Para que múltiples datos de usuarios sea graficados en la sección de Histórico Público, es necesario que múltiples usuarios se encuentren publicando simultanemente.
+
 **Consulta de información**
 - Comando para visualizar la información enviada por otros usuarios `mosquitto_sub -h 35.156.177.225 -t codigoIoT/flow5/mqtt/clima`
 
