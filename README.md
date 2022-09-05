@@ -65,8 +65,9 @@ Para ejecutar este flow, es necesario lo siguiente:
 **Broker publico**
 -   Comando para consultar las ip publicas disponibles  `nslookup broker.hivemq.com`.
 
-> **Note:** Se puede usar la ip de su elección
-> **Note:** Para que múltiples datos de usuarios sea graficados en la sección de Histórico Público, es necesario que múltiples usuarios se encuentren publicando simultanemente.
+> **Note:** Se puede usar la ip de su elección.
+
+> **Note:** Para que múltiples datos de usuarios sean graficados en la sección de Histórico Público, es necesario que múltiples usuarios se encuentren publicando simultanemente.
 
 **Consulta de información**
 - Comando para visualizar la información enviada por otros usuarios `mosquitto_sub -h 35.156.177.225 -t codigoIoT/flow5/mqtt/clima`
