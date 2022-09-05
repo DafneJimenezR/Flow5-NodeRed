@@ -3,6 +3,7 @@ Este repositorio contiene el Flow5 en Node-RED en el cual se muestran gráficos 
 
 ## Introducción
 En este Flujo podrá apreciarse un conjunto de datos a través de gráficos en Dashboard, las cuales tienen como propósito reportar información climática recibida manualmente por MQTT, la información recibida automáticamente por API y la información de varios usuarios compartida por MQTT mediante un broker público.
+
 ## Material Necesario
 Para realizar este flow necesitas lo siguiente:
 
@@ -52,18 +53,19 @@ Para ejecutar este flow, es necesario lo siguiente:
 ### Instrucciones de operación
 
 -   Para observar el resultado de este flow, abre un navegador y dirígete a localhost:1880/ui.
--   Para activar las gráficas de clima manual, debes enviar por MQTT un mensaje que contenga un JSON con las variables ID, temp y hum.
+-   Para observar datos en las gráficas de la  sección **clima manual**, debes enviar por MQTT un mensaje que contenga un JSON con las variables ID, temp y hum.
 - 
 ### Notas
-
--   La sección manual de este flow se suscribe al tema codigoIoT/fow5/mqtt en un broker local.
--   El mensaje mqtt usado para probar este flow es  `mosquitto_pub -h localhost -t ccodigoIoT/fow5/mqtt -m '{"ID":"Dafne","temp":22,"hum":80}'`
--   Para que la gráfica histórica muestre información, deben enviarse al menos 2 puntos.
--   Para actualizar la IP del broker publico, se recomienda el siguiente comando  `nslookup broker.hivemq.com`. Puedes usar el broker publico de tu elección.
--   Para que múltiples graficas sean mostradas en la sección de Histórico Público, es necesario que múltiples usuarios se encuentren publicando a la vez.
-
-- Comando para visualizar la información enviada por otros usuarios 
-`mosquitto_sub -h 35.156.177.225 -t codigoIoT/flow5/mqtt/clima`
+**Sección manual**
+-   Se suscribe al tema codigoIoT/flow5/mqtt en un broker local.
+-   Comando para comprobar el correcto funcionamiento `mosquitto_pub -h localhost -t codigoIoT/flow5/mqtt -m '{"ID":"Dafne","temp":22,"hum":91}'`
+-- Nota: Para que la gráfica histórica muestre información, deben enviarse al menos 2 puntos.
+**Broker publico**
+-   Comando para consultar las ip publicas disponibles  `nslookup broker.hivemq.com`.
+-- Nota: Se puede usar la ip de su elección
+-- Nota: Para que múltiples datos de usuarios sea graficados en la sección de Histórico Público, es necesario que múltiples usuarios se encuentren publicando simultanemente.
+**Consulta de información**
+- Comando para visualizar la información enviada por otros usuarios `mosquitto_sub -h 35.156.177.225 -t codigoIoT/flow5/mqtt/clima`
 
 ## Resultados
 
@@ -82,8 +84,8 @@ A continuación puede ver el tablero resultante.
 
 ## Evidencias
 
--   [Repositorio](https://github.com/DafneJimenezR/Flow2-NodeRed)
-- [Hugo Escalpelo](https://github.com/hugoescalpelo/)
+-   [Repositorio](https://github.com/DafneJimenezR/Flow5-NodeRed)
+
 
 ## Créditos
 - [Hugo Escalpelo](https://github.com/hugoescalpelo/)
