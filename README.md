@@ -62,6 +62,8 @@ Para ejecutar este flow, es necesario lo siguiente:
 -   Para actualizar la IP del broker publico, se recomienda el siguiente comando  `nslookup broker.hivemq.com`. Puedes usar el broker publico de tu elección.
 -   Para que múltiples graficas sean mostradas en la sección de Histórico Público, es necesario que múltiples usuarios se encuentren publicando a la vez.
 
+- Comando para visualizar la información enviada por otros usuarios 
+`mosquitto_sub -h 35.156.177.225 -t codigoIoT/flow5/mqtt/clima`
 
 ## Resultados
 
