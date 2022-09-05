@@ -76,6 +76,8 @@ A continuación puede ver el tablero resultante.
 
 ![enter image description here](https://github.com/DafneJimenezR/Flow5-NodeRed/blob/main/HistoricoPublico.png)
 
+![Gráfica que muestra el envio de datos simultaneo](https://github.com/DafneJimenezR/Flow5-NodeRed/blob/main/DatosUsuarios.png)
+
 ## Evidencias
 
 -   [Repositorio](https://github.com/DafneJimenezR/Flow2-NodeRed)
